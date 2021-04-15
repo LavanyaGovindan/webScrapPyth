@@ -9,5 +9,5 @@ alls = []
 for d in soup.findAll('div', attrs={'class':'contaier'}):
     #print(d)
     n = d.find('div', attrs={'class':'container information'})
-    content =n.find_all('br')
-    print(content[0])
+    content = d.find(class_="container information").get_text()
+    print(content)
